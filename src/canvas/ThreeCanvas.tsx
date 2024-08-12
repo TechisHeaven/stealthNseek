@@ -5,6 +5,7 @@ import * as THREE from "three";
 import { useEffect, useRef } from "react";
 import AvatarWithShovel from "../components/avatar/AvatarWithShovel";
 import MainGround from "../components/ground/MainGround";
+import Walls from "../components/walls/Walls";
 
 const ThreeCanvas = () => {
   const { scene } = useGLTF("/assets/kit/GLB_format/fire-basket.glb");
@@ -29,17 +30,9 @@ const ThreeCanvas = () => {
       />
       <directionalLight position={[5, 5, 5]} />
       <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} />
-
-      {/* <FlyControls
-        autoForward={false}
-        dragToLook={false}
-        movementSpeed={1}
-        rollSpeed={0.005}
-        makeDefault
-      /> */}
-      {/* <KenneyModel /> */}
       <MainGround />
       <AvatarWithShovel />
+      <Walls />
       <Environment preset="night" />
     </Canvas>
   );

@@ -16,6 +16,7 @@ export class AvatarController {
   private actions: { [key: string]: AnimationAction } = {};
   private speed: number = 1; // Movement speed
   private isJumping: boolean = false;
+  private isAttacking: boolean = false;
   private currentDirection: "left" | "right" | "forward" | "backward" | null =
     null;
   private currentAction: AnimationAction | null = null;
@@ -56,8 +57,29 @@ export class AvatarController {
     if (!this.isMoving && this.currentAction?.getClip().name === "walk") {
       this.playAction("idle");
     }
-
+    this.actionListner();
     this.isMoving = false; // Reset the movement flag
+  }
+
+  private actionListner() {
+    window.addEventListener("click", (e) => {
+      this.playAction("idle");
+      this.playAction("attack-melee-right");
+      this.isAttacking = true;
+      if (this.isAttacking) {
+        setTimeout(() => {
+          if (this.currentAction) {
+            // this.actions["attack-melee-right"].fadeIn(1);
+            this.currentAction.fadeOut(1); // Smoothly fade out the current action
+          }
+          this.playAction("idle");
+          this.currentAction = this.actions["attack-melee-right"];
+          this.currentAction.reset().fadeIn(1).stop();
+          this.actions["attack-melee-right"].reset().fadeIn(1).stop();
+          this.isAttacking = false;
+        }, 1000);
+      }
+    });
   }
 
   playAction(actionName: string) {
