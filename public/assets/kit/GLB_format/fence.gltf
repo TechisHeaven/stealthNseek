@@ -1,0 +1,195 @@
+{
+  "asset": {
+    "generator": "UnityGLTF",
+    "version": "2.0"
+  },
+  "extensionsUsed": [
+    "KHR_texture_transform"
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ],
+      "name": "fence"
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 436,
+      "type": "VEC3",
+      "max": [
+        0.5,
+        0.6399999856948853,
+        -0.4399999976158142
+      ],
+      "min": [
+        -0.5,
+        0,
+        -0.559999942779541
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 436,
+      "type": "VEC3",
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "min": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 436,
+      "type": "VEC4",
+      "max": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "min": [
+        -1,
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 436,
+      "type": "VEC2",
+      "max": [
+        0.09375,
+        0.7250000238418579
+      ],
+      "min": [
+        0.03125,
+        0.5249999761581421
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5123,
+      "count": 684,
+      "type": "SCALAR",
+      "max": [
+        435
+      ],
+      "min": [
+        0
+      ]
+    }
+  ],
+  "buffers": [
+    {
+      "uri": "fence_data.bin",
+      "byteLength": 22296
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 5232,
+      "byteStride": 12,
+      "target": 34962,
+      "byteOffset": 0
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 5232,
+      "byteLength": 5232,
+      "byteStride": 12,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 10464,
+      "byteLength": 6976,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 17440,
+      "byteLength": 3488,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 20928,
+      "byteLength": 1368,
+      "target": 34963
+    }
+  ],
+  "images": [
+    {
+      "uri": "Textures/colormap.png",
+      "name": "colormap"
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0,
+          "extensions": {
+            "KHR_texture_transform": {
+              "texCoord": 0
+            }
+          }
+        },
+        "metallicFactor": 0
+      },
+      "doubleSided": true,
+      "name": "colormap"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0
+        }
+      ],
+      "name": "fence"
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "fence"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9728,
+      "minFilter": 9984
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0,
+      "name": "colormap"
+    }
+  ]
+}

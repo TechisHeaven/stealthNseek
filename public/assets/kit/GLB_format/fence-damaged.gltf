@@ -1,0 +1,195 @@
+{
+  "asset": {
+    "generator": "UnityGLTF",
+    "version": "2.0"
+  },
+  "extensionsUsed": [
+    "KHR_texture_transform"
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ],
+      "name": "fence-damaged"
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 364,
+      "type": "VEC3",
+      "max": [
+        0.5,
+        0.6399999856948853,
+        -0.19998636841773987
+      ],
+      "min": [
+        -0.5,
+        0,
+        -0.6036096811294556
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 364,
+      "type": "VEC3",
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "min": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 364,
+      "type": "VEC4",
+      "max": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "min": [
+        -1,
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 364,
+      "type": "VEC2",
+      "max": [
+        0.09375,
+        0.7250000238418579
+      ],
+      "min": [
+        0.03125,
+        0.5249999761581421
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5123,
+      "count": 588,
+      "type": "SCALAR",
+      "max": [
+        363
+      ],
+      "min": [
+        0
+      ]
+    }
+  ],
+  "buffers": [
+    {
+      "uri": "fence-damaged_data.bin",
+      "byteLength": 18648
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 4368,
+      "byteStride": 12,
+      "target": 34962,
+      "byteOffset": 0
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 4368,
+      "byteLength": 4368,
+      "byteStride": 12,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 8736,
+      "byteLength": 5824,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 14560,
+      "byteLength": 2912,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 17472,
+      "byteLength": 1176,
+      "target": 34963
+    }
+  ],
+  "images": [
+    {
+      "uri": "Textures/colormap.png",
+      "name": "colormap"
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0,
+          "extensions": {
+            "KHR_texture_transform": {
+              "texCoord": 0
+            }
+          }
+        },
+        "metallicFactor": 0
+      },
+      "doubleSided": true,
+      "name": "colormap"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0
+        }
+      ],
+      "name": "fence-damaged"
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "fence-damaged"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9728,
+      "minFilter": 9984
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0,
+      "name": "colormap"
+    }
+  ]
+}

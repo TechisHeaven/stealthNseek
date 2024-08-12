@@ -1,0 +1,195 @@
+{
+  "asset": {
+    "generator": "UnityGLTF",
+    "version": "2.0"
+  },
+  "extensionsUsed": [
+    "KHR_texture_transform"
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ],
+      "name": "pumpkin-tall-carved"
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 208,
+      "type": "VEC3",
+      "max": [
+        0.13919998705387115,
+        0.25999999046325684,
+        0.12055099755525589
+      ],
+      "min": [
+        -0.13919998705387115,
+        0,
+        -0.12055099755525589
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 208,
+      "type": "VEC3",
+      "max": [
+        0.9902409315109253,
+        1,
+        0.9999988079071045
+      ],
+      "min": [
+        -0.9976450800895691,
+        -1,
+        -0.9999988079071045
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 208,
+      "type": "VEC4",
+      "max": [
+        1,
+        0.4481857419013977,
+        1,
+        1
+      ],
+      "min": [
+        -1,
+        -0.4487687945365906,
+        -1,
+        1
+      ]
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 208,
+      "type": "VEC2",
+      "max": [
+        0.71875,
+        0.9750000238418579
+      ],
+      "min": [
+        0.46875,
+        0.5249999761581421
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5121,
+      "count": 396,
+      "type": "SCALAR",
+      "max": [
+        207
+      ],
+      "min": [
+        0
+      ]
+    }
+  ],
+  "buffers": [
+    {
+      "uri": "pumpkin-tall-carved_data.bin",
+      "byteLength": 10380
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 2496,
+      "byteStride": 12,
+      "target": 34962,
+      "byteOffset": 0
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 2496,
+      "byteLength": 2496,
+      "byteStride": 12,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 4992,
+      "byteLength": 3328,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 8320,
+      "byteLength": 1664,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 9984,
+      "byteLength": 396,
+      "target": 34963
+    }
+  ],
+  "images": [
+    {
+      "uri": "Textures/colormap.png",
+      "name": "colormap"
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0,
+          "extensions": {
+            "KHR_texture_transform": {
+              "texCoord": 0
+            }
+          }
+        },
+        "metallicFactor": 0
+      },
+      "doubleSided": true,
+      "name": "colormap"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0
+        }
+      ],
+      "name": "pumpkin-tall-carved"
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "pumpkin-tall-carved"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9728,
+      "minFilter": 9984
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0,
+      "name": "colormap"
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "asset": {
+    "generator": "UnityGLTF",
+    "version": "2.0"
+  },
+  "extensionsUsed": [
+    "KHR_texture_transform"
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ],
+      "name": "grave-border"
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 1430,
+      "type": "VEC3",
+      "max": [
+        0.2621332108974457,
+        0.06550654768943787,
+        0.6094973683357239
+      ],
+      "min": [
+        -0.2621332108974457,
+        0,
+        -0.6094973683357239
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1430,
+      "type": "VEC3",
+      "max": [
+        0.976531982421875,
+        1,
+        0.9824549555778503
+      ],
+      "min": [
+        -0.976531982421875,
+        -1,
+        -0.9824549555778503
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1430,
+      "type": "VEC4",
+      "max": [
+        1,
+        1,
+        0.9965564012527466,
+        1
+      ],
+      "min": [
+        -1,
+        0,
+        -0.9965564012527466,
+        -1
+      ]
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 1430,
+      "type": "VEC2",
+      "max": [
+        0.09375,
+        0.7250000238418579
+      ],
+      "min": [
+        0.09375,
+        0.5249999761581421
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5123,
+      "count": 2865,
+      "type": "SCALAR",
+      "max": [
+        1429
+      ],
+      "min": [
+        0
+      ]
+    }
+  ],
+  "buffers": [
+    {
+      "uri": "grave-border_data.bin",
+      "byteLength": 74372
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 17160,
+      "byteStride": 12,
+      "target": 34962,
+      "byteOffset": 0
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 17160,
+      "byteLength": 17160,
+      "byteStride": 12,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 34320,
+      "byteLength": 22880,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 57200,
+      "byteLength": 11440,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 68640,
+      "byteLength": 5732,
+      "target": 34963
+    }
+  ],
+  "images": [
+    {
+      "uri": "Textures/colormap.png",
+      "name": "colormap"
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0,
+          "extensions": {
+            "KHR_texture_transform": {
+              "texCoord": 0
+            }
+          }
+        },
+        "metallicFactor": 0
+      },
+      "doubleSided": true,
+      "name": "colormap"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0
+        }
+      ],
+      "name": "grave-border"
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "grave-border"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9728,
+      "minFilter": 9984
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0,
+      "name": "colormap"
+    }
+  ]
+}

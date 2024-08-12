@@ -1,0 +1,195 @@
+{
+  "asset": {
+    "generator": "UnityGLTF",
+    "version": "2.0"
+  },
+  "extensionsUsed": [
+    "KHR_texture_transform"
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ],
+      "name": "iron-fence-curve"
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 1200,
+      "type": "VEC3",
+      "max": [
+        0.5,
+        0.823900043964386,
+        0.5
+      ],
+      "min": [
+        -0.4724999666213989,
+        0,
+        -0.4745676815509796
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1200,
+      "type": "VEC3",
+      "max": [
+        1.0000001192092896,
+        1,
+        1.0000001192092896
+      ],
+      "min": [
+        -1.0000001192092896,
+        -1,
+        -1.0000001192092896
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1200,
+      "type": "VEC4",
+      "max": [
+        1.0000001192092896,
+        1.9424095026347836e-18,
+        1.0000001192092896,
+        1
+      ],
+      "min": [
+        -1.0000001192092896,
+        -1.9424095026347836e-18,
+        -1.0000001192092896,
+        1
+      ]
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 1200,
+      "type": "VEC2",
+      "max": [
+        0.84375,
+        0.7990726828575134
+      ],
+      "min": [
+        0.53125,
+        0.5490726828575134
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5123,
+      "count": 1992,
+      "type": "SCALAR",
+      "max": [
+        1199
+      ],
+      "min": [
+        0
+      ]
+    }
+  ],
+  "buffers": [
+    {
+      "uri": "iron-fence-curve_data.bin",
+      "byteLength": 61584
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 14400,
+      "byteStride": 12,
+      "target": 34962,
+      "byteOffset": 0
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 14400,
+      "byteLength": 14400,
+      "byteStride": 12,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 28800,
+      "byteLength": 19200,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 48000,
+      "byteLength": 9600,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 57600,
+      "byteLength": 3984,
+      "target": 34963
+    }
+  ],
+  "images": [
+    {
+      "uri": "Textures/colormap.png",
+      "name": "colormap"
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0,
+          "extensions": {
+            "KHR_texture_transform": {
+              "texCoord": 0
+            }
+          }
+        },
+        "metallicFactor": 0
+      },
+      "doubleSided": true,
+      "name": "colormap"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0
+        }
+      ],
+      "name": "iron-fence-curve"
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "iron-fence-curve"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9728,
+      "minFilter": 9984
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0,
+      "name": "colormap"
+    }
+  ]
+}
