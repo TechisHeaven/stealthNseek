@@ -1,110 +1,93 @@
-// AvatarWithShovel.tsx
-
 import { useAnimations, useGLTF } from "@react-three/drei";
-import { useFrame, useThree } from "@react-three/fiber";
 import { useEffect, useRef } from "react";
-import { Group, Mesh, Object3D, Vector3 } from "three";
-import { AvatarController } from "../../controller/avatar/AvatarController";
+import { Group, SkinnedMesh, Mesh, Vector3 } from "three";
 
-const AvatarWithShovel: React.FC = () => {
+interface AvatarWithShovelProps {
+  scale: number;
+  animation: string;
+}
+
+const AvatarWithShovel = ({ animation, ...props }: AvatarWithShovelProps) => {
   const avatarRef = useRef<Group>(null);
   const shovelRef = useRef<Mesh>(null);
-  const avatarController = useRef<AvatarController | null>(null);
-
-  // Get the camera from useThree
-  const { camera } = useThree();
-
-  // Set the camera offset (distance from the avatar)
-  const cameraOffset = new Vector3(2, 2, 4); // Adjusted closer offset
+  const group = useRef<Group>(null);
 
   // Load avatar and shovel models
-  const { scene: avatarScene, animations } = useGLTF(
+  const { animations, nodes, materials } = useGLTF(
     "/assets/kit/GLB_format/character-digger.glb"
-  );
-  const { scene: shovelScene } = useGLTF("/assets/kit/GLB_format/shovel.glb");
-  const { actions: avatarActions } = useAnimations(animations, avatarRef);
+  ) as any;
+  const { scene: shovelScene } = useGLTF(
+    "/assets/kit/GLB_format/shovel.glb"
+  ) as any;
+  const { actions: avatarActions } = useAnimations(animations, group);
 
   useEffect(() => {
-    if (avatarRef.current && shovelRef.current) {
-      const hand = avatarRef.current.getObjectByName("arm-right") as Object3D;
-
-      if (hand) {
-        shovelRef.current.position.set(-0.19, 0, 0.2);
-        shovelRef.current.rotation.set(0, 0, 0);
-        hand.add(shovelRef.current); // Attach shovel to hand
-      }
-    }
-  }, [avatarRef, shovelRef, avatarActions]);
-
-  useEffect(() => {
-    if (avatarRef.current) {
-      avatarController.current = new AvatarController(
-        avatarRef.current,
-        animations
-      );
-      avatarController.current.playAction("idle");
-    }
-  }, [animations]);
-
-  useFrame((state, delta) => {
-    avatarController.current?.update(delta); // Update avatar animations
-
-    // Make the camera follow the avatar
-    if (avatarRef.current) {
-      const avatarPosition = avatarRef.current.position.clone();
-      const desiredCameraPosition = avatarPosition.clone().add(cameraOffset);
-
-      // Update camera position smoothly
-      camera.position.lerp(desiredCameraPosition, 0.2);
-      camera.lookAt(
-        avatarRef.current.position.x,
-        avatarRef.current.position.y,
-        avatarRef.current.position.z
-      );
-    }
-  });
-
-  // Handle avatar movement based on keyboard input
-  const handleKeyDown = (event: KeyboardEvent) => {
-    switch (event.key) {
-      case "ArrowLeft":
-      case "a":
-        avatarController.current?.moveAndRotate("left");
-        break;
-      case "ArrowRight":
-      case "d":
-        avatarController.current?.moveAndRotate("right");
-        break;
-      case "ArrowUp":
-      case "w":
-        avatarController.current?.moveAndRotate("forward");
-        break;
-      case "ArrowDown":
-      case "s":
-        avatarController.current?.moveAndRotate("backward");
-        break;
-      case " ":
-        avatarController.current?.jump();
-        break;
-      case "Shift":
-        avatarController.current?.toggleSitOrStand();
-        break;
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("keydown", handleKeyDown);
+    avatarActions[animation]?.reset().fadeIn(0.24).play();
     return () => {
-      window.removeEventListener("keydown", handleKeyDown);
+      avatarActions[animation]?.fadeOut(0.24);
     };
-  }, []);
-
+  }, [animation]);
   return (
-    <>
-      <primitive castShadow object={avatarScene} ref={avatarRef} />
-      <primitive object={shovelScene} ref={shovelRef} />
-    </>
+    <group ref={group} {...props} scale={[1, 1, 1]} dispose={null}>
+      <group name="Scene">
+        <group name="fall_guys">
+          <primitive object={nodes["root"]} />
+          <primitive object={nodes["character-digger"]} />
+          {/* <primitive object={avatarScene} ref={avatarRef} />
+          <primitive object={shovelScene} ref={shovelRef} /> */}
+          <skinnedMesh
+            name="arm-left"
+            geometry={nodes["arm-left"].geometry}
+            material={materials.colormap}
+            skeleton={nodes["arm-left"].skeleton}
+            // castShadow
+            // receiveShadow
+          />
+          <skinnedMesh
+            name="arm-right"
+            geometry={nodes["root"].geometry}
+            material={materials.colormap}
+            skeleton={nodes["root"].skeleton}
+            // castShadow
+            // receiveShadow
+          />
+          <skinnedMesh
+            name="digger_1"
+            geometry={nodes["character-digger_1"].geometry}
+            material={materials.Material}
+            skeleton={nodes["character-digger_1"].skeleton}
+          />
+          <skinnedMesh
+            name="head"
+            geometry={nodes["head"].geometry}
+            material={materials.Material}
+            skeleton={nodes["head"].skeleton}
+          />
+          <skinnedMesh
+            name="leg-left"
+            geometry={nodes["leg-left"].geometry}
+            material={materials.Material}
+            skeleton={nodes["leg-left"].skeleton}
+          />
+          <skinnedMesh
+            name="leg-right"
+            geometry={nodes["leg-right"].geometry}
+            material={materials.Material}
+            skeleton={nodes["leg-right"].skeleton}
+          />
+          <skinnedMesh
+            name="torso"
+            geometry={nodes["torso"].geometry}
+            material={materials.Material}
+            skeleton={nodes["torso"].skeleton}
+          />
+        </group>
+      </group>
+    </group>
   );
 };
 
 export default AvatarWithShovel;
+
+useGLTF.preload("/assets/kit/GLB_format/character-digger.glb");
+useGLTF.preload("/assets/kit/GLB_format/shovel.glb");
